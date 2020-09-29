@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "TS_NODE_PROJECT=tsconfig.api.json NODE_ENV=test mocha -r espower-typescript/guess test/**/*.test.ts",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
@@ -13,8 +16,16 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
+    "@types/mocha": "^8.0.3",
     "@types/node": "^14.11.2",
     "@types/react": "^16.9.49",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "eslint": "^7.10.0",
+    "eslint-config-egg": "^8.1.2",
+    "espower-typescript": "^9.0.2",
+    "mocha": "^8.1.3",
+    "power-assert": "^1.6.1",
     "typescript": "^4.0.3"
   }
 }
